@@ -1,0 +1,212 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity var(--time-animation) var(--time-distribution-function);
+}
+
+.backdrop.is-hidden {
+  visibility: visible;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden {
+  .modal {
+    transform: translate(-50%, -50%) scale(1.25);
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  min-width: 528px;
+  min-height: 581px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  background-color: #fff;
+  transition: transform var(--time-animation) var(--time-distribution-function);
+}
+
+.modal__button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  color: #000000;
+  cursor: pointer;
+  transition: color var(--time-animation) var(--time-distribution-function);
+  &:hover,
+  &:focus {
+    color: var(--accent-text-color);
+  }
+}
+
+.modal__close-svg {
+  fill: currentColor;
+}
+
+/* Форма модалки */
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .modal__text {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+  }
+}
+
+.modal__name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.modal__label {
+  color: var(--secondary-text-color);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  margin-bottom: 4px;
+}
+
+.modal__content {
+  position: relative;
+}
+
+.modal__input {
+  width: 448px;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.66;
+  letter-spacing: 0.01em;
+  border-radius: 4px;
+  padding-left: 42px;
+  transition: border var(--time-animation) var(--time-distribution-function);
+  &:hover,
+  &:focus {
+    border: 1px solid #2196f3;
+    outline: none;
+  }
+  &:hover + .modal__svg,
+  &:focus + .modal__svg {
+    fill: #2196f3;
+  }
+}
+
+.modal__svg {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  fill: currentColor;
+  transition: fill var(--time-animation) var(--time-distribution-function);
+}
+
+.modal__textarea {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.66;
+  letter-spacing: 0.01em;
+  padding: 12px 16px;
+  resize: none;
+  width: 100%;
+  transition: border var(--time-animation) var(--time-distribution-function);
+  &:hover,
+  &:focus {
+    border: 1px solid #2196f3;
+    outline: none;
+  }
+}
+
+.modal__consent {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.modal__check-mark {
+  fill: #ffffff;
+  border: 2px solid var(--main-text-color);
+  border-radius: 2px;
+  margin-right: 8px;
+  transition: background-color var(--time-animation)
+      var(--time-distribution-function),
+    border var(--time-animation) var(--time-distribution-function);
+}
+
+.modal__square:checked + .modal__check-mark {
+  background-color: var(--accent-text-color);
+  border: transparent;
+  background-origin: border-box;
+}
+
+.modal__subtext {
+  color: var(--accent-text-color);
+  margin-left: 4px;
+  transition: color var(--time-animation) var(--time-distribution-function);
+  &:hover,
+  &:focus {
+    color: #0f5a97;
+  }
+}
+
+.modal__checkbox {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+  display: flex;
+  align-items: center;
+}
+
+.modal__button {
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--accent-text-color);
+  color: #ffffff;
+  margin-left: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  transition: background-color var(--time-animation)
+    var(--time-distribution-function);
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+}

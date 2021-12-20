@@ -1,0 +1,68 @@
+.command {
+  background-color: #f5f4fa;
+  padding: 94px 0;
+}
+
+.command__list {
+  display: flex;
+  padding-left: 0;
+}
+
+.command__list > .command__items {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background-color: var(--button-color);
+  &:not(:first-child) {
+    margin-left: 30px;
+  }
+}
+
+.command__text {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.command__subtext {
+  margin-bottom: 16px;
+  font-weight: 400;
+  color: var(--secondary-text-color);
+}
+
+.command__text,
+.command__subtext {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.command__description {
+  padding: 30px 32px;
+}
+
+.command__sublist {
+  display: flex;
+  justify-content: space-between;
+}
+
+.command__anchor {
+  display: flex;
+  height: 44px;
+  width: 44px;
+  align-items: center;
+  justify-content: center;
+  color: var(--svg-color);
+  border-radius: 50%;
+  transition: color var(--time-animation) var(--time-distribution-function),
+    background-color var(--time-animation) var(--time-distribution-function);
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: var(--accent-text-color);
+  }
+}
+
+.command__svg {
+  fill: currentColor;
+}
