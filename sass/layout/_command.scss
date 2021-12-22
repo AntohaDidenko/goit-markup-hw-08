@@ -4,7 +4,6 @@
 }
 
 .command__list {
-  display: flex;
   padding-left: 0;
 }
 
@@ -13,9 +12,6 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--button-color);
-  &:not(:first-child) {
-    margin-left: 30px;
-  }
 }
 
 .command__text {
@@ -43,7 +39,6 @@
 
 .command__sublist {
   display: flex;
-  justify-content: space-between;
 }
 
 .command__anchor {
