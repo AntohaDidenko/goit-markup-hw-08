@@ -5,6 +5,12 @@
 
 .command__list {
   padding-left: 0;
+  margin-bottom: -30px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+  }
 }
 
 .command__list > .command__items {
@@ -12,6 +18,14 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--button-color);
+  margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    width: calc(100% / 2 - 30px);
+    margin-right: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc(100% / 4 - 30px);
+  }
 }
 
 .command__text {
@@ -39,6 +53,12 @@
 
 .command__sublist {
   display: flex;
+  justify-content: center;
+  margin-right: -10px;
+}
+
+.command__subitems {
+  margin-right: 10px;
 }
 
 .command__anchor {
