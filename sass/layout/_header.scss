@@ -1,13 +1,14 @@
 .header {
   border-bottom: 1px solid #ececec;
+  min-height: 60px;
   @media screen and (max-width: 767px) {
     position: relative;
   }
 }
 
 .header__nav {
-  // display: flex;
-  // align-items: center;
+  display: flex;
+  align-items: center;
   // flex-grow: 1;
   @media screen and (min-width: 768px) {
     display: flex;
@@ -18,6 +19,7 @@
 
 .header__logo {
   margin-right: 93px;
+  padding: 16px 0;
   color: #000000;
   font-family: Raleway;
   font-weight: 700;
@@ -30,19 +32,27 @@
     }
 }
 
+.header__menu-button {
+  display: inline-flex;
+  border: none;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  margin-left: auto;
+}
+
 .header__menu {
   display: none;
+  flex-direction: column;
+  justify-content: space-between;
   flex-grow: 1;
   .header__list {
-    display: none;
     display: flex;
     flex-direction: column;
     &:first-child {
-      margin-bottom: 302px;
     }
     &:last-child {
-      margin-left: auto;
-      flex-direction: column-reverse;
     }
   }
   @media screen and (max-width: 767px) {
@@ -77,16 +87,17 @@
 }
 
 .header__contacts {
-  font-weight: 500;
   color: var(--secondary-text-color);
-  &:first-child {
-    margin-top: 32px;
-    font-size: 24px;
-    // margin-left: 50px;
-  }
-  &:last-child {
+  &:nth-child(2) {
+    order: -1;
+    font-weight: 500;
     font-size: 34px;
-    color: var(--accent-text-color);
+    line-height: 1.18;
+    margin-bottom: 32px;
+  }
+  &:nth-child(1) {
+    font-weight: 500;
+    font-size: 24px;
   }
   .header__link {
     display: flex;
@@ -136,6 +147,7 @@
 .header__sublist {
   display: flex;
   margin-top: 64px;
+  margin-left: -10px;
 }
 
 .header__subitems {

@@ -86,12 +86,18 @@ body {
 
 .header {
   border-bottom: 1px solid #ececec;
+  min-height: 60px;
 }
 
 @media screen and (max-width: 767px) {
   .header {
     position: relative;
   }
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -104,6 +110,7 @@ body {
 
 .header__logo {
   margin-right: 93px;
+  padding: 16px 0;
   color: #000000;
   font-family: Raleway;
   font-weight: 700;
@@ -117,24 +124,26 @@ body {
   color: var(--accent-text-color);
 }
 
+.header__menu-button {
+  display: inline-flex;
+  border: none;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  margin-left: auto;
+}
+
 .header__menu {
   display: none;
+  flex-direction: column;
+  justify-content: space-between;
   flex-grow: 1;
 }
 
 .header__menu .header__list {
-  display: none;
   display: flex;
   flex-direction: column;
-}
-
-.header__menu .header__list:first-child {
-  margin-bottom: 302px;
-}
-
-.header__menu .header__list:last-child {
-  margin-left: auto;
-  flex-direction: column-reverse;
 }
 
 @media screen and (max-width: 767px) {
@@ -175,18 +184,20 @@ body {
 }
 
 .header__contacts {
-  font-weight: 500;
   color: var(--secondary-text-color);
 }
 
-.header__contacts:first-child {
-  margin-top: 32px;
-  font-size: 24px;
+.header__contacts:nth-child(2) {
+  order: -1;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  margin-bottom: 32px;
 }
 
-.header__contacts:last-child {
-  font-size: 34px;
-  color: var(--accent-text-color);
+.header__contacts:nth-child(1) {
+  font-weight: 500;
+  font-size: 24px;
 }
 
 .header__contacts .header__link {
@@ -240,6 +251,7 @@ body {
 .header__sublist {
   display: flex;
   margin-top: 64px;
+  margin-left: -10px;
 }
 
 .header__subitems {
