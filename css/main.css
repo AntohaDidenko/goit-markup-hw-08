@@ -417,8 +417,13 @@ body {
 }
 
 .granting {
-  display: none;
   padding-bottom: 94px;
+}
+
+@media screen and (max-width: 1199px) {
+  .granting {
+    display: none;
+  }
 }
 
 .granting__list {
@@ -550,15 +555,13 @@ body {
 .clients__list {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
-  margin-bottom: -30px;
+  margin: -15px;
 }
 
 .clients__items {
   color: var(--svg-color);
   width: calc(100% / 2 - 30px);
-  margin-right: 30px;
-  margin-bottom: 30px;
+  margin: 15px;
 }
 
 @media screen and (min-width: 768px) {
@@ -687,7 +690,7 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .join {
     margin-left: 70px;
     margin-bottom: 0;
