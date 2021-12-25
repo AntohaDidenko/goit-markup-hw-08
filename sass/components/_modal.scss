@@ -26,13 +26,14 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  min-width: 528px;
-  min-height: 581px;
+  max-width: 450px;
+  max-height: 690px;
   border-radius: 4px;
   display: flex;
   justify-content: center;
   padding: 40px;
   background-color: #fff;
+  z-index: 9999;
   transition: transform var(--time-animation) var(--time-distribution-function);
 }
 
@@ -99,7 +100,7 @@
 }
 
 .modal__input {
-  width: 448px;
+  max-width: 448px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
