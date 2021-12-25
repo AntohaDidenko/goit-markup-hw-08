@@ -4,17 +4,28 @@
 
 .portfolio__list-buttons {
   display: flex;
+  flex-wrap: wrap;
   padding-left: 0;
-  margin-bottom: 50px;
-  justify-content: center;
+  margin-right: -8px;
+  margin-bottom: 25px;
+  // margin-bottom: 50px;
+  // justify-content: center;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
   list-style: none;
-  .portfolio__items-buttons:not(:first-child) {
-    margin-left: 8px;
+  .portfolio__items-buttons {
+    margin-right: 8px;
+    margin-bottom: 15px;
+  }
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 35px;
   }
 }
 
