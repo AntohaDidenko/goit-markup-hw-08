@@ -280,7 +280,6 @@ body {
   background-color: transparent;
   justify-content: center;
   align-items: center;
-  z-index: 99;
   margin-left: auto;
 }
 
@@ -1113,14 +1112,22 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 450px;
-  max-height: 609px;
+  width: 280px;
+  max-height: 550px;
   border-radius: 4px;
   display: flex;
   justify-content: center;
-  padding: 40px;
+  padding: 20px;
   background-color: #fff;
   transition: transform var(--time-animation) var(--time-distribution-function);
+}
+
+@media screen and (min-width: 450px) {
+  .modal {
+    width: 450px;
+    max-height: 609px;
+    padding: 40px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1164,11 +1171,17 @@ body {
 
 .modal__form .modal__text {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 12px;
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 12px;
+}
+
+@media screen and (min-width: 450px) {
+  .modal__form .modal__text {
+    font-size: 20px;
+  }
 }
 
 .modal__name {
@@ -1185,10 +1198,16 @@ body {
 .modal__label {
   color: var(--secondary-text-color);
   font-weight: 400;
-  font-size: 12px;
+  font-size: 9px;
   line-height: 1.16;
   letter-spacing: 0.01em;
   margin-bottom: 4px;
+}
+
+@media screen and (min-width: 450px) {
+  .modal__label {
+    font-size: 12px;
+  }
 }
 
 .modal__content {
@@ -1278,13 +1297,20 @@ body {
 }
 
 .modal__checkbox {
+  display: block;
+  align-items: center;
   font-weight: normal;
-  font-size: 12px;
+  font-size: 9px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
-  display: flex;
-  align-items: center;
+}
+
+@media screen and (min-width: 450px) {
+  .modal__checkbox {
+    display: flex;
+    font-size: 12px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1295,8 +1321,8 @@ body {
 }
 
 .modal__button {
-  width: 200px;
-  height: 50px;
+  width: 150px;
+  height: 30px;
   border: none;
   border-radius: 4px;
   background-color: var(--accent-text-color);
@@ -1304,10 +1330,18 @@ body {
   margin-left: 12px;
   cursor: pointer;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.87;
   letter-spacing: 0.06em;
   transition: background-color var(--time-animation) var(--time-distribution-function);
+}
+
+@media screen and (min-width: 450px) {
+  .modal__button {
+    font-size: 16px;
+    width: 200px;
+    height: 50px;
+  }
 }
 
 .modal__button:hover, .modal__button:focus {
