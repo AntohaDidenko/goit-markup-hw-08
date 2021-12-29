@@ -89,11 +89,14 @@
   }
 }
 
+.modal__list {
+  width: 100%;
+}
+
 .modal__name {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
   &:not(:first-child) {
     margin-top: 10px;
   }
